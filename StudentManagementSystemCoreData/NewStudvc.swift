@@ -9,7 +9,11 @@
 import UIKit
 
 class NewStudvc: UIViewController {
-
+    
+    
+    var students : Student?
+    
+    
     private let spidtxt:UITextField = {
         let txt = UITextField()
         txt.placeholder = "Enter SPID"
@@ -41,9 +45,9 @@ class NewStudvc: UIViewController {
         
         return txt
     }()
-    private let citytxt:UITextField = {
+    private let passwordtxt:UITextField = {
         let txt = UITextField()
-        txt.placeholder = "Enter File Name"
+        txt.placeholder = "Enter password"
         txt.textColor = .blue
         txt.borderStyle = .roundedRect
         txt.font = UIFont(name : "", size : 20.0)
@@ -85,15 +89,24 @@ class NewStudvc: UIViewController {
     }()
     
     
-    @objc private func    savestud()
+    
+    @objc private func savestud()
     {
         let name = nametxt.text!
+        let id = spidtxt.text!
+        let password = passwordtxt.text!
+        let std = stdtxt.text!
+        let age = Int(agetxt.text!)!
+        let phone = phonetxt.text!
         
-        let stud  = Student(id : spid, name : studName)
         
-        if let stud = Student {
+       // let stud  = Student(id : id, name : name,password: password,std : std,age:age,phone:phone)
+        
+        if let stud = students
+        {
             
-            CoreDataHandler.shared.update(stud: stud, id: spid, name: <#T##String#>, city: <#T##String#>, phone: <#T##String#>, std: <#T##String#>, age: <#T##Int#>, completion: <#T##() -> Void#>){
+            CoreDataHandler.shared.update(stud: stud, id: id, name: name, pwd: password, phone: phone, std: std, age: age)
+            {
                 [weak self] in
                 
                 self?.navigationController?.popViewController(animated: true)
@@ -102,8 +115,10 @@ class NewStudvc: UIViewController {
             
         }
         else{
-            CoreDataHandler.shared.insert(id: <#T##String#>, name: <#T##String#>, city: <#T##String#>, phone: <#T##String#>, std: <#T##String#>, age: <#T##Int#>, completion: <#T##() -> Void#>)
+            CoreDataHandler.shared.insert(id: id, name: name, pwd: password, phone : phone, std: std, age: age)
             {
+                [weak self] in
+                self?.navigationController?.popViewController(animated: true)
                 
             }
         }
@@ -112,24 +127,47 @@ class NewStudvc: UIViewController {
         
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(spidtxt)
         view.addSubview(agetxt)
-        view.addSubview(citytxt)
+        view.addSubview(passwordtxt)
         view.addSubview(nametxt)
         view.addSubview(phonetxt)
         view.addSubview(stdtxt)
         view.addSubview(mybtn)
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .black
+        
+        //update
+        
+        if let stud = students
+        {
+            
+            spidtxt.text = stud.spid
+            spidtxt.isEnabled = false
+            nametxt.text = stud.studName
+            passwordtxt.text = stud.password
+            phonetxt.text = stud.phoneno
+            stdtxt.text = stud.standard
+            agetxt.text = String(stud.age)
+            
+            
+            
+        }
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
        spidtxt.frame = CGRect(x: 40, y: view.safeAreaInsets.top + 20, width: view.width - 80, height: 40)
-        
-        
+        nametxt.frame = CGRect(x: 40, y: spidtxt.bottom + 10, width: view.width - 80, height: 40)
+        agetxt.frame = CGRect(x: 40, y: nametxt.bottom + 10, width: view.width - 80, height: 40)
+        stdtxt.frame = CGRect(x: 40, y: agetxt.bottom + 10, width: view.width - 80, height: 40)
+        phonetxt.frame = CGRect(x: 40, y: stdtxt.bottom + 10, width: view.width - 80, height: 40)
+        passwordtxt.frame = CGRect(x: 40, y: phonetxt.bottom + 10, width: view.width - 80, height: 40)
+        mybtn.frame = CGRect(x: 40, y: passwordtxt.bottom + 10, width: view.width - 80, height: 40)
     }
 
 }

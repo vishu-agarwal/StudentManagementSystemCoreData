@@ -13,9 +13,14 @@
 		0B4C45982696DF3800409298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B4C45972696DF3800409298 /* Assets.xcassets */; };
 		0B4C459B2696DF3800409298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4C45992696DF3800409298 /* LaunchScreen.storyboard */; };
 		0B4C45A32696E0D700409298 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C45A22696E0D700409298 /* CoreDataHandler.swift */; };
-		0B4C45A52696EB7A00409298 /* EmployeeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C45A42696EB7A00409298 /* EmployeeVc.swift */; };
-		0B4C45A72696ED5700409298 /* NewStudvc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C45A62696ED5700409298 /* NewStudvc.swift */; };
 		0B4C45A92696ED9100409298 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C45A82696ED9100409298 /* File.swift */; };
+		0B6F9AF026A030C7003DBFD3 /* LoginVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6F9AEE26A030C6003DBFD3 /* LoginVc.swift */; };
+		0B6F9AF126A030C7003DBFD3 /* NewNoticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6F9AEF26A030C7003DBFD3 /* NewNoticeVC.swift */; };
+		0B6F9AF326A030FB003DBFD3 /* NoticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6F9AF226A030FB003DBFD3 /* NoticeVC.swift */; };
+		0B6F9AF526A03113003DBFD3 /* StudentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6F9AF426A03112003DBFD3 /* StudentVC.swift */; };
+		0B6F9AF726A03149003DBFD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6F9AF626A03149003DBFD3 /* ViewController.swift */; };
+		0B6F9AF926A0319E003DBFD3 /* StudentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6F9AF826A0319E003DBFD3 /* StudentListVC.swift */; };
+		0B6F9AFB26A031C5003DBFD3 /* NewStudvc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6F9AFA26A031C5003DBFD3 /* NewStudvc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +32,14 @@
 		0B4C459A2696DF3800409298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B4C459C2696DF3800409298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B4C45A22696E0D700409298 /* CoreDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
-		0B4C45A42696EB7A00409298 /* EmployeeVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeVc.swift; sourceTree = "<group>"; };
-		0B4C45A62696ED5700409298 /* NewStudvc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStudvc.swift; sourceTree = "<group>"; };
 		0B4C45A82696ED9100409298 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		0B6F9AEE26A030C6003DBFD3 /* LoginVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVc.swift; path = ../../StudentAdmissionSystemUsingSqlite/StudentAdmissionSystemUsingSqlite/LoginVc.swift; sourceTree = "<group>"; };
+		0B6F9AEF26A030C7003DBFD3 /* NewNoticeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoticeVC.swift; sourceTree = "<group>"; };
+		0B6F9AF226A030FB003DBFD3 /* NoticeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeVC.swift; sourceTree = "<group>"; };
+		0B6F9AF426A03112003DBFD3 /* StudentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentVC.swift; sourceTree = "<group>"; };
+		0B6F9AF626A03149003DBFD3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0B6F9AF826A0319E003DBFD3 /* StudentListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentListVC.swift; path = ../../StudentAdmissionSystemUsingSqlite/StudentAdmissionSystemUsingSqlite/StudentListVC.swift; sourceTree = "<group>"; };
+		0B6F9AFA26A031C5003DBFD3 /* NewStudvc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewStudvc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +73,16 @@
 			isa = PBXGroup;
 			children = (
 				0B4C458D2696DF3500409298 /* AppDelegate.swift */,
-				0B4C45A42696EB7A00409298 /* EmployeeVc.swift */,
-				0B4C45A62696ED5700409298 /* NewStudvc.swift */,
 				0B4C45A22696E0D700409298 /* CoreDataHandler.swift */,
 				0B4C45A82696ED9100409298 /* File.swift */,
+				0B6F9AF826A0319E003DBFD3 /* StudentListVC.swift */,
+				0B6F9AF226A030FB003DBFD3 /* NoticeVC.swift */,
+				0B6F9AF626A03149003DBFD3 /* ViewController.swift */,
 				0B4C45912696DF3500409298 /* Main.storyboard */,
+				0B6F9AFA26A031C5003DBFD3 /* NewStudvc.swift */,
+				0B6F9AF426A03112003DBFD3 /* StudentVC.swift */,
+				0B6F9AEE26A030C6003DBFD3 /* LoginVc.swift */,
+				0B6F9AEF26A030C7003DBFD3 /* NewNoticeVC.swift */,
 				0B4C45972696DF3800409298 /* Assets.xcassets */,
 				0B4C45992696DF3800409298 /* LaunchScreen.storyboard */,
 				0B4C459C2696DF3800409298 /* Info.plist */,
@@ -147,12 +162,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B4C45A52696EB7A00409298 /* EmployeeVc.swift in Sources */,
+				0B6F9AF526A03113003DBFD3 /* StudentVC.swift in Sources */,
 				0B4C45A92696ED9100409298 /* File.swift in Sources */,
+				0B6F9AF026A030C7003DBFD3 /* LoginVc.swift in Sources */,
+				0B6F9AF726A03149003DBFD3 /* ViewController.swift in Sources */,
+				0B6F9AF926A0319E003DBFD3 /* StudentListVC.swift in Sources */,
 				0B4C45A32696E0D700409298 /* CoreDataHandler.swift in Sources */,
+				0B6F9AFB26A031C5003DBFD3 /* NewStudvc.swift in Sources */,
 				0B4C45962696DF3500409298 /* StudentManagementSystemCoreData.xcdatamodeld in Sources */,
-				0B4C45A72696ED5700409298 /* NewStudvc.swift in Sources */,
+				0B6F9AF326A030FB003DBFD3 /* NoticeVC.swift in Sources */,
 				0B4C458E2696DF3500409298 /* AppDelegate.swift in Sources */,
+				0B6F9AF126A030C7003DBFD3 /* NewNoticeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
