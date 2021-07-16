@@ -94,9 +94,10 @@ class CoreDataHandler {
         
     }
     func nupdate (note : Note,title:String,msg:String, completion: @escaping() -> Void) {
-        let notice  = Note(context: managedObjectContext!)
-        notice.msg = msg
-        notice.title = title
+      
+        //let notice  = Note(context: managedObjectContext!)
+        note.msg = msg
+        note.title = title
         save()
         
         completion()

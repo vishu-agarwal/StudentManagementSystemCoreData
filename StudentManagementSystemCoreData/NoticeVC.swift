@@ -84,7 +84,7 @@ extension NoticeVC : UITableViewDelegate, UITableViewDataSource{
            
                 self?.noticearray.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .automatic)
-                
+                self?.noticetbl.reloadData()
             
             
             

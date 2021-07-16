@@ -50,19 +50,18 @@ class NewNoticeVC: UIViewController {
             
             CoreDataHandler.shared.nupdate(note: notice, title: name, msg : cont)
             {
-                [weak self] in
-                
-                self?.navigationController?.popViewController(animated: true)
-                
+                [weak self]  in
+               
+                    self?.navigationController?.popViewController(animated: false)
             }
-            
+                
         }
         else{
             CoreDataHandler.shared.ninsert(title: name, msg: cont)
             {
                 
                   [weak self] in
-                self?.navigationController?.popViewController(animated: true)
+                self?.navigationController?.popViewController(animated: false)
                 
             }
         }

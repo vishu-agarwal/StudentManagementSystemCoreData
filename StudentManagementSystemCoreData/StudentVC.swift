@@ -123,8 +123,11 @@ class StudentVC: UIViewController {
                        
                         
                                 
-                                let vc = StudentVC()
-                                self?.navigationController?.pushViewController(vc, animated: true)
+                                //let vc = StudentVC()
+                               // self?.navigationController?.pushViewController(vc, animated: false)
+                        
+                        self?.view.reloadInputViews()
+                        
                             })
                     
                 }
